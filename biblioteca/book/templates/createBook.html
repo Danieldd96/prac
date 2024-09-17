@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %} Create Book{% endblock title %}
+{% block main_content %}
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Save book">
+</form>
+{% endblock main_content %}

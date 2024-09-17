@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %} Books {% endblock title %}
+{% block main_content %}
+<h1>Books<h1>
+    <ul>
+        {% for book in object_list  %}
+        <li>
+            Title: {{ book.title }}
+            Author: {{book.author}}
+            Year: {{book.year}}
+        </li>
+        {% empty %}
+            <li>No books available</li>
+        {% endfor %}
+    </ul>
+{% endblock main_content %}
